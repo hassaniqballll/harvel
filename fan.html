@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>FAN</title>
+
+<!--  SGVsbG8hIE15IG5hbWUgaXMgU2FyYSBNYXphbC4gV2VsY29tZSB0byBteSBDb2RlUGVuIQ== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&family=Raleway:wght@100;200;300;400;500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<!-- SGVsbG8hIE15IG5hbWUgaXMgU2FyYSBNYXphbC4gV2VsY29tZSB0byBteSBDb2RlUGVuOiBodHRwczovL2NvZGVwZW4uaW8vU2FyYW1hemFsICYgR2l0SHViOiBodHRwczovL2dpdGh1Yi5jb20vc2FyYW1hemFs -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css'>
+
+</head>
+<style>
+ @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&family=Roboto:wght@500;700&display=swap");
+
+:root {
+  --clr-text: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+ 
+  justify-content: center;
+  align-items: center;
+  background: rgb(115,12,50);
+background: radial-gradient(circle, rgba(115,12,50,1) 5%, rgba(13,12,12,1) 60%);
+  min-height: 100vh;
+}
+
+#recipes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 60px 60px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.recipe-container {
+  background: rgba(133, 133, 133, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  padding: 30px 0;
+  width: min(1200px, 100%);
+}
+
+.recipe-container > h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #dda3b6;
+  margin: 20px 0 40px;
+}
+
+.swiper {
+  width: 80%;
+  height: 100%;
+  margin-bottom: 30px;
+}
+
+.swiper-scrollbar {
+  --swiper-scrollbar-bottom: 0px;
+  --swiper-scrollbar-drag-bg-color: #dda3b6;
+  --swiper-scrollbar-size: 5px;
+}
+
+.post {
+  position: relative;
+  max-width: 400px;
+  padding: 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--clr-text);
+  background-color: transparent;
+  border-radius: 10px;
+  isolation: isolate;
+}
+
+.post::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 15px;
+  background: rgba(236, 149, 200, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.post-img {
+  width: 100%;
+  max-width: 400px;
+height: 300px;
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 6px;
+  
+}
+
+.post-body {
+  display: grid;
+  grid-template-columns: 15% 60% 20%;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 0;
+  cursor: default;
+}
+
+.post-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.post-author {
+  width: fit-content;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0.6;
+  color: var(--clr-text);
+}
+
+.post-avatar {
+  width: 40px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.post-actions {
+  position: relative;
+}
+
+.post-actions-content {
+  position: absolute;
+  bottom: 130%;
+  right: 0;
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(172, 172, 172, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 2px 2px 10px 2px hsl(0, 0%, 0%, 0.25);
+  transition: opacity 0.25s, scale 0.25s;
+  transform-origin: bottom right;
+}
+
+.post-actions-content[data-visible="false"] {
+  pointer-events: none;
+  opacity: 0;
+  scale: 0;
+}
+
+.post-actions-content[data-visible="true"] {
+  pointer-events: unset;
+  scale: 1;
+  opacity: 1;
+}
+
+.post-actions-content li {
+  padding: 0.5rem 0.65rem;
+  border-radius: 0.25rem;
+  list-style: none;
+}
+
+.post-actions-content li:is(:hover, :focus-within) {
+  background-color: rgba(248, 132, 169, 0.7);
+}
+
+.post-actions-link {
+  width: max-content;
+  display: grid;
+  grid-template-columns: 1rem 1fr;
+  align-items: center;
+  gap: 0.6rem;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.post-like {
+  text-decoration: none;
+  color: var(--clr-text);
+  margin-right: 5px;
+  font-size: 1.1rem;
+  opacity: 0.65;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.post-actions-controller {
+  border: 0;
+  background: none;
+  color: var(--clr-text);
+  cursor: pointer;
+  opacity: 0.65;
+}
+
+.post-like:hover,
+.post-actions-controller:hover {
+  opacity: 1;
+}
+
+.post-like:focus {
+  outline: none;
+}
+
+.post-like.active {
+  color: rgb(255, 0, 0);
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1200px) { 
+  .swiper {
+      width: 80%;
+    }
+}
+
+@media (max-width: 900px) {
+  #recipes {
+    padding: 60px 80px;
+  }
+
+  .swiper {
+    width: 50%;
+  }
+}
+
+@media (max-width: 765px) {
+  .swiper {
+    width: 70%;
+  }
+}
+
+@media (max-width: 550px) {
+  #recipes {
+    padding: 40px 40px;
+  }
+
+  .swiper {
+    width: 80%;
+  }
+}
+
+
+
+
+ 
+
+
+
+
+
+
+
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     outline: none;
+     font-family: 'Roboto', sans-serif;
+  }
+ 
+ .main_nav
+ {
+   background: #ffffff00;
+ }
+ .main_nav:hover
+ {
+   background: #000;
+ }
+ 
+  .top-navbar{
+   background: #1e1f26;
+      display: flex;
+      justify-content: space-between;
+  }
+  .top-navbar p{
+      margin-top: 13px;
+      margin-left: 15px;
+  }
+  .top-navbar .icons{
+     margin-top: 13px;
+     margin-left: 15px;
+  }
+  .top-navbar a{
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      margin-right: 20px;
+      font-family: arial black;
+  }
+  .top-navbar a img{
+      margin-bottom: 3px;
+      margin-right: 5px;
+  }
+  .top-navbar a:hover{
+      color: #ff0266;
+  }
+  .navbar-toggler{
+   width: 80px;
+   margin-left: 85%;
+  }
+  @media screen and (max-width:400px){
+      .top-navbar a{
+          font-size: 13px;
+      }
+      .top-navbar a img{
+          width: 15px;
+      }
+      .top-navbar p{
+          font-size: 13px;
+      }
+  }
+  @media screen and (max-width:320px){
+      .top-navbar a{
+          font-size: 10px;
+      }
+      .top-navbar a img{
+          width: 13px;
+      }
+      .top-navbar p{
+          font-size: 10px;
+      }
+  }
+  @media screen and (max-width:318px){
+      .top-navbar a{
+          font-size: 8px;
+          margin-left: 0;
+      }
+      .top-navbar a img{
+          width: 10px;
+          margin-left: 0;
+      }
+      .top-navbar p{
+          font-size: 10px;
+          margin-top: 20px;
+      }
+  }
+  #navbar{
+      background-color: #1e1f26;
+  }
+  #logo{
+      margin-left: 15px;
+      color: white;
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 6px;
+  }
+  #logo span{
+      color: #ffc800;
+  }
+  #logon #span1{
+          font-size: 30px;     
+  }
+  .navbar-nav{
+      margin-left: 20px;
+  }
+  .nav-item{
+      margin-left: 10px;
+  }
+  .nav-item .nav-link{
+      color: white;
+      margin-left: 2px;
+      text-shadow: 0px 0px 1px rgb(0, 0, 0);
+      transition: 0.5s ease;
+  }
+  .nav-item .nav-link:hover{
+      color: #ffc800;    
+  }
+  .dropdown-menu li a{
+      color: white;
+      transition: 0.5s ease;
+  }
+  .dropdown-menu .li a:hover{
+      background-color: rgb(67 0 86);
+      color: #ffc800;
+  }
+  #search input{
+      border-radius: 50px;
+      border: none;
+  }
+  #search button{
+      border-radius: 50px;
+      color: white;
+      border: 1px solid #ffc800;
+      background-color: #ffc800;
+ 
+  }
+  q{
+    text-decoration-line: line-through
+  }
+  h3{
+    font-size: x-large;
+    color: red;
+  }
+  p{
+    color: yellow
+  }
+
+   
+       
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+          
+ 
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@500&display=swap');
+          .body{
+             line-height: 1.5;
+             font-family: 'Poppins', sans-serif;
+          }
+          *{
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+          }
+          .container-1{
+             max-width: 1170px;
+            
+             margin: auto;
+          }
+          .row-1{
+             display: flex;
+             flex-wrap: wrap;
+          }
+          ul{
+             list-style: none;
+ 
+          }
+          .footer{
+             background: linear-gradient(to right, #00093c, #2d0b00);
+             padding: 70px 0;
+          }
+          .footer-col{
+             width: 25%;
+             padding: 0 15px;
+          }
+          .footer-col h6{
+             font-size: 18px;
+             color: #ffffff;
+             text-transform: capitalize;
+             margin-bottom: 30px;
+             font-weight: 500;
+             position: relative;
+ 
+          }
+          .footer-col h6::before{
+         content: '';
+         position: absolute;
+         left: 0;
+         bottom: -10px;
+         background-color: #e91e63;
+         height: 2px;
+         box-sizing: border-box;
+         width: 50px;
+         }
+         .footer-col ul li:not(:last-child){
+         margin-bottom: 10px;
+         }
+         .footer-col ul li a{
+             font-size: 16px;
+             text-transform: capitalize;
+             color: #ffffff;
+             text-decoration: none;
+             font-weight: 300;
+             color: #bbbbbb;
+             display: block;
+             transition: all 0.3s ease;
+             margin-left: -5%;
+         }
+         .footer-col ul li a:hover{
+             color:#ffffff;
+             padding-left: 8px;
+         }
+         .footer-col .social-links a{
+             display: inline-block;
+             height: 40px;
+             width: 40px;
+             background-color: rgba(255,255,255,0.2);
+             margin: 0 10px 10px 0;
+             text-align: center;
+             line-height: 40px;
+             border-radius: 50%;
+             color: #ffffff;
+             transition: all 0.3s ease;
+         }
+         .footer-col .social-links a:hover{
+             color: #24262b;
+             background-color: #ffffff;
+       }
+         
+ 
+ 
+ 
+         @media(max-width: 574px){
+         .footer-col {
+           width: 100%;
+          
+         }
+         }
+
+
+
+
+
+
+
+
+
+
+         *, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #333;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #ecf0f9;
+  background-attachment: fixed;
+}
+
+.content {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+
+.heading {
+  width: 100%;
+  margin-left: 1rem;
+  font-weight: 900;
+  font-size: 1.618rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1ch;
+  line-height: 1;
+  padding-bottom: 0.5em;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+
+.description {
+  width: 100%;
+  margin-top: 0;
+  margin-left: 1rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  color: inherit;
+  cursor: pointer;
+  width: calc(33% - 2rem);
+  min-width: calc(33% - 2rem);
+  height: 400px;
+  min-height: 400px;
+  perspective: 1000px;
+  margin: 1rem;
+  position: relative;
+}
+@media screen and (max-width: 800px) {
+  .card {
+    width: calc(50% - 2rem);
+  }
+}
+@media screen and (max-width: 500px) {
+  .card {
+    width: 100%;
+  }
+}
+
+.front,
+.back {
+  display: flex;
+  border-radius: 6px;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: ease-in-out 600ms;
+}
+
+.front {
+  background-size: cover;
+  padding: 2rem;
+  font-size: 1.618rem;
+  font-weight: 600;
+  color: #fff;
+  overflow: hidden;
+  font-family: Poppins, sans-serif;
+}
+.front:before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+ 
+  opacity: 0.25;
+  z-index: -1;
+}
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+.card:nth-child(even):hover .front {
+  transform: rotateY(-180deg);
+}
+
+.back {
+  background: #fff;
+  transform: rotateY(-180deg);
+  padding: 0 2em;
+}
+.back .button {
+  background: linear-gradient(135deg, #1a9be6, #1a57e6);
+}
+.back .button:before {
+  box-shadow: 0 0 10px 10px rgba(26, 87, 230, 0.25);
+  background-color: rgba(26, 87, 230, 0.25);
+}
+.card:hover .back {
+  transform: rotateY(0deg);
+}
+.card:nth-child(even) .back {
+  transform: rotateY(180deg);
+}
+.card:nth-child(even) .back .button {
+  background: linear-gradient(135deg, #e61a80, #e61a3c);
+}
+.card:nth-child(even) .back .button:before {
+  box-shadow: 0 0 10px 10px rgba(230, 26, 60, 0.25);
+  background-color: rgba(230, 26, 60, 0.25);
+}
+.card:nth-child(even):hover .back {
+  transform: rotateY(0deg);
+}
+
+.button {
+  transform: translateZ(40px);
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-weight: bold;
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 100px;
+  font: inherit;
+  border: none;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 300ms ease;
+}
+.button:before {
+  transition: 300ms ease;
+  position: absolute;
+  display: block;
+  content: "";
+  transform: translateZ(-40px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  border-radius: 100px;
+  left: 10px;
+  top: 16px;
+}
+.button:hover {
+  transform: translateZ(55px);
+}
+.button:hover:before {
+  transform: translateZ(-55px);
+}
+.button:active {
+  transform: translateZ(20px);
+}
+.button:active:before {
+  transform: translateZ(-20px);
+  top: 12px;
+}
+ 
+ 
+
+
+
+
+
+         
+ 
+ 
+ 
+ 
+ 
+</style>
+<!-- partial:index.partial.html -->
+<body>
+
+  <div class="main_nav">  
+    <div class="top-navbar">
+      <a href=""><img src="img.png" alt="" width="60px" height="100%"></a>
+      <div class="icons">
+        
+          <a href="login.html"><img src="arrow-right.png" alt="" width="18px">Login</a>
+          
+      </div>
+  </div>
+  <nav class="navbar navbar-expand-lg" id="navbar">
+      <div class="container-fluid">
+       
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span><img src="icons8-list-48.png" alt="" width="30px"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Product</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Category
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(14, 144, 214);">
+                  <li><a class="dropdown-item" href="#">Fans</a></li>
+                  <li><a class="dropdown-item" href="#">Geysers</a></li>
+                  <li><a class="dropdown-item" href="#">CFL</a></li>
+                  <li><a class="dropdown-item" href="#">Washing Machine</a></li>
+                  <li><a class="dropdown-item" href="#">AC</a></li>
+                  <li><a class="dropdown-item" href="#">Fridge</a></li>
+                  <li><a class="dropdown-item" href="#">Dispenser</a></li>
+                  <li><a class="dropdown-item" href="#">Headphone</a></li>
+                  <li><a class="dropdown-item" href="#">Laptop</a></li>
+                  <li><a class="dropdown-item" href="#">Mobile</a></li>
+              </ul>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex search" id="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav></div>
+  
+
+
+    <section id="recipes">
+      <div class="recipe-container">
+        <h1>ELECTRIC FAN</h1>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide post">
+              <img
+                class="post-img"
+                src="https://5.imimg.com/data5/SB/YV/MY-2321649/table-fan-250x250.jpg"alt="recipe" />
+
+             
+            </div>
+
+            <div class="swiper-slide post">
+              <img class="post-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0icx31GMQcUo7M3im-hiI9L60F-CGlsTBWA&usqp=CAU" alt="recipe" />
+
+            
+            </div>
+
+            <div class="swiper-slide post">
+              <img class="post-img" src="https://www.rico.in/cdn/shop/products/1_c84e99d4-9875-4292-8569-f36e4b39d686_1500x.jpg?v=1648098913" alt="recipe" />
+
+              
+            </div>
+
+            <div class="swiper-slide post">
+              <img
+                class="post-img"
+                src="https://homepoint.pk/media/catalog/product/cache/3ed5cb5229c25b4543902f9f11a53344/i/r/iras-ceiling-fan-by-sk-fans-pakistan.jpg" alt="recipe" />
+
+              
+            </div>
+
+            <div class="swiper-slide post">
+              <img class="post-img" src="https://static-01.daraz.pk/p/e9ce856f831705eb0424766917e2a572.jpg_750x750.jpg_.webp" alt="recipe" />
+
+              
+            </div>
+
+            <div class="swiper-slide post">
+              <img
+                class="post-img"
+                src="https://fanhouse.pk/wp-content/uploads/2023/01/56_1579514776.jpg"
+                alt="recipe" />
+
+              
+            </div>
+          </div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- partial:index.partial.html -->
+<div class="content">
+  <h1 class="heading"></h1>
+  <p class="description"></p><a class="card" href="#!">
+    <div class="front" style="background-image: url(https://www.alfatah.pk/cdn/shop/products/AFP-000337418-1000.png?v=1623508574)">
+      
+    </div>
+    <div class="back">
+      <div>
+        <b>
+          Electricity Floor Rechargeable Pedestal Fan.
+        </b>
+        <P></P>
+        <p><i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa gray fa-star" aria-hidden="true"></i></p>
+          <q>Rs.1,899</q><p></p><h3>Rs.1,329 SAVE 30%</h3>
+          <p></p>
+        <button class="button">Order Now</button>
+      </div>
+    </div></a><a class="card" href="#!">
+    <div class="front" style="background-image: url(https://5.imimg.com/data5/SN/TO/MY-38819345/high-speed-pedestal-fan-500x500.jpg)">
+      
+    </div>
+    <div class="back">
+      <div>
+        <b>
+          Avon Blue DC Pedestal Fan, 2600 Rpm, 3 Ft.
+        </b>
+        <P></P>
+        <p><i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa gray fa-star" aria-hidden="true"></i></p>
+          <q>Rs.1,899</q><p></p><h3>Rs.1,329 SAVE 30%</h3>
+          <p></p>
+        <button class="button">Order Now</button>
+      </div>
+    </div></a><a class="card" href="#!">
+    <div class="front" style="background-image: url(https://5.imimg.com/data5/KI/YK/MY-38819345/electric-pedestal-fan-500x500.jpg)">
+ 
+    </div>
+    <div class="back">
+      <div>
+        <b>
+          Rico Rechargeable AC DC Battery & Power Operated Table Fan RF806.
+        </b>
+        <P></P>
+        <p><i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa gray fa-star" aria-hidden="true"></i></p>
+          <q>Rs.1,899</q><p></p><h3>Rs.1,329 SAVE 30%</h3>
+          <p></p>
+        <button class="button">Order Now</button>
+      </div>
+    </div></a><a class="card" href="#!">
+    <div class="front" style="background-image: url(https://3.imimg.com/data3/KQ/EH/MY-2318291/1-250x250.png)">
+     
+    </div>
+    <div class="back">
+      <div>
+        <b>
+          Iris Ceiling Fan - SK Fans pakistan | Homepoint.pk.
+        </b>
+        <P></P>
+        <p><i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa gray fa-star" aria-hidden="true"></i></p>
+          <q>Rs.1,899</q><p></p><h3>Rs.1,329 SAVE 30%</h3>
+          <p></p>
+        <button class="button">Order Now</button>
+      </div>
+    </div></a><a class="card" href="#!">
+    <div class="front" style="background-image: url(https://5.imimg.com/data5/SELLER/Default/2020/11/QY/VY/BQ/83989544/floor-stand-rechargeable-pedestal-fan.jpg)">
+      
+    </div>
+    <div class="back">
+      <div>
+        <b>
+          Ceiling Fan Usha Fan, 50% OFF | tudosobreeventos.com.br
+        </b>
+        <P></P>
+        <p><i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa gray fa-star" aria-hidden="true"></i></p>
+          <q>Rs.1,899</q><p></p><h3>Rs.1,329 SAVE 30%</h3>
+          <p></p>
+        <button class="button">Order Now</button>
+      </div>
+    </div></a><a class="card" href="#!">
+    <div class="front" style="background-image: url(https://5.imimg.com/data5/SELLER/Default/2022/2/LN/BJ/OV/56266301/new-product-500x500.jpeg)">
+      
+    </div>
+    <div class="back">
+      <div>
+        <b>
+          GFC Ceiling Fan Crescent Model Copper Winding 56 Inches.
+        </b>
+        <P></P>
+        <p><i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <i class="fa gray fa-star" aria-hidden="true"></i></p>
+          <q>Rs.1,899</q><p></p><h3>Rs.1,329 SAVE 30%</h3>
+          <p></p>
+        <button class="button">Order Now</button>
+      </div>
+    </div></a>
+</div>
+<!-- partial -->
+
+
+
+    <footer class="footer">
+      <div class="container-1">
+      <div class="row-1">
+      <div class="footer-col">
+      <h6>Electronic</h6>
+      <ul>
+        <li><a href="#">The first electronic device was introduced by an American scientist, Sir Joseph Henry, in the year 1835.</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h6>get help</h6>
+      <ul>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Shipping</a></li>
+      <li><a href="#">Returns</a></li>
+      <li><a href="#">Order status</a></li>
+      <li><a href="#">Payment options</a></li>
+      </ul>
+    </div><div class="footer-col">
+      <h6>only shop</h6>
+      <ul>
+      <li><a href="#">Fan</a></li>
+      <li><a href="#">Geyser</a></li>
+      <li><a href="#">CFL</a></li>
+      <li><a href="#">AC</a></li>
+      </ul>
+    </div><div class="footer-col">
+      <h6>follow us</h6>
+      <div class="social-links">
+      
+      <a href="#"><i class="fab fa-facebook-f text-white"></i></a>
+      <a href="#"><i class="fab fa-twitter text-white"></i></a>
+      <a href="#"><i class="fab fa-instagram  text-white"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in text-white"></i></a>
+      </div>
+      <div class="mt-4">
+        <button-1><i class="far fa-envelope text-white"></i></button-1>
+        <input type="email" placeholder="Enter your email id" required>
+        <button-1 type="submit"><i class="fas fa-arrow-right text-white"></i></button-1>
+      </div>
+    </div>
+    </div>
+    </div>
+      </footer>
+
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js'></script><script  src="./script12.js"></script>
+
+</body>
+</html>
